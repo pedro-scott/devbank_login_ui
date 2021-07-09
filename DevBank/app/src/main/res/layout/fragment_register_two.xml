@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modelo.RegisterTwoFragment"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/topAppBarRegisterTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/titleTopAppBarRegisterTwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                app:title="@string/register_step_two"
+                app:titleTextColor="@color/blue_devbank_logo"
+                app:navigationIcon="@drawable/ic_dev_bank_return"
+                app:navigationIconTint="@color/blue_devbank_logo"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressIndicatorRegisterTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/topAppBarRegisterTwo" />
+
+        <ImageView
+            android:id="@+id/logo_devbank"
+            android:contentDescription="@string/content_description_logo_devbank"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/dev_bank_logo_full"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressIndicatorRegisterTwo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/text_field_adress"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_devbank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextdAdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldZipCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_zip_code"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toStartOf="@id/textFieldNumber"
+            app:layout_constraintStart_toStartOf="@id/textFieldAdress"
+            app:layout_constraintTop_toBottomOf="@id/textFieldAdress"
+            app:layout_constraintHorizontal_weight="0.6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="9" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="@string/text_field_number"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@id/textFieldAdress"
+            app:layout_constraintStart_toEndOf="@id/textFieldZipCode"
+            app:layout_constraintTop_toTopOf="@id/textFieldZipCode"
+            app:layout_constraintHorizontal_weight="0.4"
+            app:helperText="@string/helper_text_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldDistrict"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/text_field_district"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@id/textFieldNumber"
+            app:layout_constraintStart_toStartOf="@id/textFieldZipCode"
+            app:layout_constraintTop_toBottomOf="@id/textFieldNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/text_field_city"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintStart_toStartOf="@id/textFieldDistrict"
+            app:layout_constraintEnd_toStartOf="@id/textFieldState"
+            app:layout_constraintTop_toBottomOf="@id/textFieldDistrict"
+            app:layout_constraintHorizontal_weight="0.65">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_state"
+            app:layout_constraintStart_toEndOf="@id/textFieldCity"
+            app:layout_constraintEnd_toEndOf="@id/textFieldDistrict"
+            app:layout_constraintTop_toTopOf="@id/textFieldCity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintHorizontal_weight="0.25"
+            app:startIconTint="@color/grey_500"
+            app:endIconTint="@color/grey_500">
+
+            <AutoCompleteTextView
+                android:id="@+id/completeTextState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/button_next"
+            app:layout_constraintTop_toBottomOf="@id/textFieldCity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textFieldCity"
+            app:layout_constraintEnd_toEndOf="@id/textFieldState"
+            app:layout_constraintVertical_bias="1.0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

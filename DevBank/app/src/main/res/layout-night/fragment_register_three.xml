@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modelo.RegisterThreeFragment"
+    android:fillViewport="true"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/topAppBarRegisterThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/titleTopAppBarRegisterThree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/black"
+                app:title="@string/register_step_three"
+                app:titleTextColor="@color/blue_devbank_logo"
+                app:navigationIcon="@drawable/ic_dev_bank_return"
+                app:navigationIconTint="@color/blue_devbank_logo"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressIndicatorRegisterThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/topAppBarRegisterThree" />
+
+        <ImageView
+            android:id="@+id/logo_devbank"
+            android:contentDescription="@string/content_description_logo_devbank"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/dev_bank_logo_full"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressIndicatorRegisterThree"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/text_field_user"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_dev_bank_user_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_devbank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_password"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_dev_bank_password_logo"
+            app:layout_constraintEnd_toEndOf="@id/textFieldUser"
+            app:layout_constraintStart_toStartOf="@id/textFieldUser"
+            app:layout_constraintTop_toBottomOf="@id/textFieldUser">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_confirmation_password"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_dev_bank_password_logo"
+            app:layout_constraintEnd_toEndOf="@id/textFieldPassword"
+            app:layout_constraintStart_toStartOf="@id/textFieldPassword"
+            app:layout_constraintTop_toBottomOf="@id/textFieldPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/button_register"
+            app:layout_constraintTop_toBottomOf="@id/textFieldConfirmPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textFieldConfirmPassword"
+            app:layout_constraintEnd_toEndOf="@id/textFieldConfirmPassword"
+            app:layout_constraintVertical_bias="1.0"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationRegisterDone"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            app:lottie_rawRes="@raw/register_done"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="false"
+            android:visibility="gone"
+            app:lottie_colorFilter="@color/blue_devbank_logo"
+            app:lottie_speed="1.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

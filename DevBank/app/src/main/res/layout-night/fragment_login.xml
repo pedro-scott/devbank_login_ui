@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modelo.LoginFragment"
+    android:background="@color/black">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldCPF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="@string/text_field_cpf"
+        app:endIconDrawable="@drawable/ic_dev_bank_clear"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_dev_bank_cpf_logo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextdCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="14"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/text_field_password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@id/textFieldCPF"
+        app:layout_constraintStart_toStartOf="@id/textFieldCPF"
+        app:layout_constraintTop_toBottomOf="@id/textFieldCPF"
+        app:startIconDrawable="@drawable/ic_dev_bank_password_logo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextdPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:enabled="false"
+        android:text="@string/button_login"
+        app:layout_constraintEnd_toEndOf="@id/textFieldPassword"
+        app:layout_constraintStart_toStartOf="@id/textFieldPassword"
+        app:layout_constraintTop_toBottomOf="@id/textFieldPassword" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationLoginDone"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/happy_developer"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="false"
+        android:visibility="gone"
+        app:lottie_speed="2.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modelo.RegisterOneFragment"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textRegisterOne"
+            android:text="@string/text_view_join_us"
+            android:fontFamily="@font/virgo"
+            android:textSize="15sp"
+            android:textColor="@color/blue_devbank_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:hint="@string/text_field_nome"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textRegisterOne"
+            app:startIconDrawable="@drawable/ic_dev_bank_user_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextdFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldCPF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_cpf"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@id/textFieldFullName"
+            app:layout_constraintStart_toStartOf="@id/textFieldFullName"
+            app:layout_constraintTop_toBottomOf="@id/textFieldFullName"
+            app:startIconDrawable="@drawable/ic_dev_bank_cpf_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextdCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="14" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_gender"
+            app:layout_constraintEnd_toEndOf="@id/textFieldCPF"
+            app:layout_constraintStart_toStartOf="@id/textFieldCPF"
+            app:layout_constraintTop_toBottomOf="@id/textFieldCPF"
+            app:startIconDrawable="@drawable/ic_dev_bank_gender_logo"
+            app:startIconTint="@color/grey_500"
+            app:endIconTint="@color/grey_500"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/completeTextdGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_phone"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@id/textFieldGender"
+            app:layout_constraintStart_toStartOf="@id/textFieldGender"
+            app:layout_constraintTop_toBottomOf="@id/textFieldGender"
+            app:startIconDrawable="@drawable/ic_dev_bank_phone_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextdPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_date"
+            app:layout_constraintEnd_toEndOf="@id/textFieldPhone"
+            app:layout_constraintStart_toStartOf="@id/textFieldPhone"
+            app:layout_constraintTop_toBottomOf="@id/textFieldPhone"
+            app:startIconDrawable="@drawable/ic_dev_bank_date_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/text_field_email"
+            app:endIconDrawable="@drawable/ic_dev_bank_clear"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@id/textFieldDate"
+            app:layout_constraintStart_toStartOf="@id/textFieldDate"
+            app:layout_constraintTop_toBottomOf="@id/textFieldDate"
+            app:startIconDrawable="@drawable/ic_dev_bank_email_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextdEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:enabled="false"
+            android:text="@string/button_next"
+            app:layout_constraintTop_toBottomOf="@id/textFieldEmail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textFieldEmail"
+            app:layout_constraintEnd_toEndOf="@id/textFieldEmail"
+            app:layout_constraintVertical_bias="1.0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">DevBank</string>
+    <string name="content_description_logo_devbank">Logo da DevBank</string>
+    <string name="button_login">Entrar</string>
+    <string name="button_register">Cadastrar</string>
+    <string name="text_field_cpf">CPF</string>
+    <string name="text_field_password">Senha</string>
+    <string name="text_field_nome">Nome Completo</string>
+    <string name="text_field_gender">Sexo</string>
+    <string name="option1_menu_register">Masculino</string>
+    <string name="option2_menu_register">Feminino</string>
+    <string name="text_field_phone">Celular</string>
+    <string name="title_date_picker">Informe sua data de nascimento</string>
+    <string name="text_field_date">Data de Nascimento</string>
+    <string name="text_field_email">Email</string>
+    <string name="button_next">Avançar</string>
+    <string name="text_field_adress">Endereço</string>
+    <string name="text_field_zip_code">CEP</string>
+    <string name="text_field_number">Número</string>
+    <string name="text_field_district">Bairro</string>
+    <string name="text_field_city">Cidade</string>
+    <string name="text_field_state">UF</string>
+    <string name="text_field_user">Usuário</string>
+    <string name="text_field_confirmation_password">Confirme sua Senha</string>
+    <string name="error_name">Nome Completo - mínimo 10 caracteres</string>
+    <string name="error_cpf">CPF inválido</string>
+    <string name="error_phone">Celular inválido</string>
+    <string name="error_email">Email - mínimo 14 caracteres</string>
+    <string name="error_adress">Endereço - mínimo 10 caracteres</string>
+    <string name="error_zip_code">CEP inválido</string>
+    <string name="error_number">Número inválido</string>
+    <string name="error_district">Bairro - mínimo 3 caracteres</string>
+    <string name="error_city">Cidade - mínimo 3 caracteres</string>
+    <string name="error_user">Usuário - mínimo 5 caracteres</string>
+    <string name="error_password">Senha - mínimo 6 caracteres</string>
+    <string name="register_step_two">Cadastro - Etapa 2 de 3</string>
+    <string name="register_step_three">Cadastro - Etapa 3 de 3</string>
+    <string name="register_done">Cadastro - Concluido</string>
+    <string name="text_view_join_us">Venha ser um DevBanker</string>
+    <string name="helper_text_number">S/N = 0</string>
+</resources>
