@@ -6,16 +6,17 @@ import android.widget.Button
 import androidx.core.view.isVisible
 import com.airbnb.lottie.LottieAnimationView
 
-fun LottieAnimationView.enable(button: Button) {
+fun LottieAnimationView.enableOneTime(button: Button) {
     button.isEnabled = false
-    visibility = View.VISIBLE
-    playAnimation()
+    this.visibility = View.VISIBLE
+    this.playAnimation()
+
+    this.disable(button)
 }
 
 fun LottieAnimationView.disable(button: Button) {
     addAnimatorListener(object : Animator.AnimatorListener {
-        override fun onAnimationStart(animation: Animator?) {
-        }
+        override fun onAnimationStart(animation: Animator?) {}
 
         override fun onAnimationEnd(animation: Animator?) {
             this@disable.isVisible = false
@@ -23,10 +24,8 @@ fun LottieAnimationView.disable(button: Button) {
             button.isEnabled = true
         }
 
-        override fun onAnimationCancel(animation: Animator?) {
-        }
+        override fun onAnimationCancel(animation: Animator?) {}
 
-        override fun onAnimationRepeat(animation: Animator?) {
-        }
+        override fun onAnimationRepeat(animation: Animator?) {}
     })
 }

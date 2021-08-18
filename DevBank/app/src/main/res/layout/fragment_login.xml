@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelo.LoginFragment"
+    tools:context=".ui.fragment.LoginFragment"
     android:background="@color/white">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -66,11 +66,12 @@
         android:id="@+id/animationLoginDone"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        app:lottie_rawRes="@raw/happy_developer"
+        app:lottie_rawRes="@raw/register_done"
         app:lottie_loop="false"
         app:lottie_autoPlay="false"
         android:visibility="gone"
-        app:lottie_speed="2.0"
+        app:lottie_colorFilter="@color/blue_devbank_logo"
+        app:lottie_speed="1.5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

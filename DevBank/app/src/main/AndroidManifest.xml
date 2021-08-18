@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_custom_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DevBank">
+
         <activity
-            android:name=".modelo.MainActivity"
-            android:screenOrientation="portrait">
+            android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelo.HomeFragment"
+    tools:context=".ui.fragment.HomeFragment"
     android:background="@color/black">
 
     <ImageView
@@ -57,7 +57,6 @@
         android:id="@+id/themeButtonHomeFragment"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:checked="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +71,7 @@
         app:lottie_rawRes="@raw/moon_stars_anim"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

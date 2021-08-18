@@ -1,4 +1,4 @@
-package br.com.devbank.feature
+package br.com.devbank.utils
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -22,9 +22,7 @@ class Mask{
             object : TextWatcher {
                 var isUpdating : Boolean = false
                 var oldString : String = ""
-                override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
-
-                }
+                override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
 
                 override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                     val str = replaceChars(s.toString())
@@ -56,12 +54,9 @@ class Mask{
                     isUpdating = true
                     etCpf.setText(cpfWithMask)
                     etCpf.setSelection(cpfWithMask.length)
-
                 }
 
-                override fun afterTextChanged(editable: Editable) {
-
-                }
+                override fun afterTextChanged(editable: Editable) {}
             }
     }
 }
