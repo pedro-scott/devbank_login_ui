@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.RegisterThreeFragment"
+    tools:context=".features.registerthree.apresentation.ui.RegisterThreeFragment"
     android:fillViewport="true"
     android:background="@color/white">
 

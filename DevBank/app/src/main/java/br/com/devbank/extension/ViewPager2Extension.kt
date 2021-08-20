@@ -3,7 +3,7 @@ package br.com.devbank.extension
 import android.graphics.drawable.Drawable
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import br.com.devbank.adapter.ViewPagerAdapter
+import br.com.devbank.features.home.apresentation.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

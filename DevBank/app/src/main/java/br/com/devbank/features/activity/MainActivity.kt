@@ -1,4 +1,4 @@
-package br.com.devbank.ui.activity
+package br.com.devbank.features.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package br.com.devbank.ui.fragment
+package br.com.devbank.features.registerthree.apresentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

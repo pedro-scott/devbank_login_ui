@@ -28,6 +28,7 @@
     <string name="error_email">Email - mínimo 14 caracteres</string>
     <string name="error_adress">Endereço - mínimo 10 caracteres</string>
     <string name="error_zip_code">CEP inválido</string>
+    <string name="error_zip_code_unknown">CEP Inexistente</string>
     <string name="error_number">Número inválido</string>
     <string name="error_district">Bairro - mínimo 3 caracteres</string>
     <string name="error_city">Cidade - mínimo 3 caracteres</string>
@@ -38,4 +39,5 @@
     <string name="register_done">Cadastro - Concluido</string>
     <string name="text_view_join_us">Venha ser um DevBanker</string>
     <string name="helper_text_number">S/N = 0</string>
+    <string name="error_unknown">Error Desconhecido!</string>
 </resources>

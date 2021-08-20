@@ -1,4 +1,4 @@
-package br.com.devbank.adapter
+package br.com.devbank.features.home.apresentation.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

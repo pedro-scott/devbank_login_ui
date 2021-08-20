@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.devbank">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_custom"
@@ -11,7 +13,8 @@
         android:theme="@style/Theme.DevBank">
 
         <activity
-            android:name=".ui.activity.MainActivity">
+            android:name=".features.activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
