@@ -3,11 +3,11 @@ package br.com.devbank.features.resgitertwo.data.model
 import com.google.gson.annotations.SerializedName
 
 data class AddressByCep(
-    val bairro: String?,
-    val cep: String?,
+    val bairro: String? = null,
+    val cep: String? = null,
     @SerializedName("localidade")
-    val cidade: String?,
-    val logradouro: String?,
-    val uf: String?,
+    val cidade: String? = null,
+    val logradouro: String? = null,
+    val uf: String? = null,
     var erro: Boolean = false
 )

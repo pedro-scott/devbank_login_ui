@@ -1,6 +1,8 @@
 package br.com.devbank.features.resgitertwo.apresentation.ui
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -96,9 +98,9 @@ class RegisterTwoFragment : Fragment() {
 
                 }
 
-                editTextZipCode.doOnTextChanged { _, _, _, _ ->
+                editTextZipCode.doOnTextChanged { _, _, before, _ ->
                     validationConditions[editTextZipCode]?.get(0)?.let { zipCodeValidationCondition ->
-                        if (zipCodeValidationCondition()) {
+                        if (zipCodeValidationCondition() && before == 0) {
                             viewModel.getAddress(editTextZipCode.textToString().justNumber())
                         }
                     }
@@ -118,19 +120,14 @@ class RegisterTwoFragment : Fragment() {
                     if (erro) {
                         isCepExists = false
                         textFieldZipCode.sendErrorMessage(getString(R.string.error_zip_code_unknown))
-
-                        editTextdAdress.text = null
-                        editTextCity.text = null
-                        editTextDistrict.text = null
-                        completeTextState.setText(null, false)
                     } else {
                         isCepExists = true
-
-                        editTextdAdress.text = logradouro?.toEditable()
-                        editTextCity.text = cidade?.toEditable()
-                        editTextDistrict.text = bairro?.toEditable()
-                        completeTextState.setText(uf, false)
                     }
+
+                    editTextdAdress.text = logradouro?.toEditable()
+                    editTextCity.text = cidade?.toEditable()
+                    editTextDistrict.text = bairro?.toEditable()
+                    completeTextState.setText(uf, false)
                 }
             }
         }
