@@ -1,26 +1,27 @@
 package br.com.devbank.features.resgitertwo.apresentation.ui
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.com.devbank.R
+import br.com.devbank.base.BaseFragment
 import br.com.devbank.databinding.FragmentRegisterTwoBinding
 import br.com.devbank.extension.*
 import br.com.devbank.features.resgitertwo.apresentation.viewmodel.RegisterTwoViewModel
+import br.com.devbank.utils.Command
 import br.com.devbank.utils.Mask
 
-class RegisterTwoFragment : Fragment() {
+class RegisterTwoFragment : BaseFragment() {
 
     private var binding: FragmentRegisterTwoBinding? = null
     private lateinit var viewModel: RegisterTwoViewModel
+    override val command = MutableLiveData<Command>()
     private var isCepExists = false
 
     override fun onCreateView(
@@ -52,6 +53,8 @@ class RegisterTwoFragment : Fragment() {
 
         activity?.let { actNonNull ->
             viewModel = ViewModelProvider(actNonNull)[RegisterTwoViewModel::class.java]
+
+            viewModel.command = command
         }
 
         return binding?.root
@@ -107,7 +110,6 @@ class RegisterTwoFragment : Fragment() {
                 }
 
                 setupObservables()
-
             }
         }
     }
@@ -128,6 +130,31 @@ class RegisterTwoFragment : Fragment() {
                     editTextCity.text = cidade?.toEditable()
                     editTextDistrict.text = bairro?.toEditable()
                     completeTextState.setText(uf, false)
+                }
+            }
+        }
+
+        viewModel.command.observe(viewLifecycleOwner) { command ->
+            when (command) {
+                is Command.Loading -> {
+                    binding?.run {
+                        if (command.value) {
+                            progressCircularLayout.visibility = View.VISIBLE
+                            buttonNext.isEnabled = false
+                        } else {
+                            progressCircularLayout.visibility = View.GONE
+                        }
+                    }
+                }
+
+                is Command.Error -> {
+                    binding?.run {
+                        noConnectionLayout.visibility = View.VISIBLE
+                        animNoConnection.playAnimation()
+                        animNoConnection.doInEnd {
+                            noConnectionLayout.visibility = View.GONE
+                        }
+                    }
                 }
             }
         }

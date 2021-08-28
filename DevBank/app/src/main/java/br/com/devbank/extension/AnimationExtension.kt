@@ -29,3 +29,17 @@ fun LottieAnimationView.disable(button: Button) {
         override fun onAnimationRepeat(animation: Animator?) {}
     })
 }
+
+fun <R> LottieAnimationView.doInEnd(action: () -> R) {
+    addAnimatorListener(object : Animator.AnimatorListener {
+        override fun onAnimationStart(p0: Animator?) {}
+
+        override fun onAnimationEnd(p0: Animator?) {
+            action()
+        }
+
+        override fun onAnimationCancel(p0: Animator?) {}
+
+        override fun onAnimationRepeat(p0: Animator?) {}
+    })
+}

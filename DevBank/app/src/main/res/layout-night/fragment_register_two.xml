@@ -198,6 +198,58 @@
             app:layout_constraintEnd_toEndOf="@id/textFieldState"
             app:layout_constraintVertical_bias="1.0"/>
 
+        <FrameLayout
+            android:id="@+id/progressCircularLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#40FFFFFF" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/noConnectionLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#40FFFFFF" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animNoConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:lottie_rawRes="@raw/no_connection"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_speed="3"
+                app:lottie_repeatCount="1"
+                />
+
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

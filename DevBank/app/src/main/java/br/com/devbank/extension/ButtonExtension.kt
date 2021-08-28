@@ -14,7 +14,6 @@ fun Button.enableByFieldsValidation(validationConditions: Map<EditText, () -> Bo
     }
 }
 
-
 @JvmName("enableByFieldsValidationWithList")
 fun Button.enableByFieldsValidation(validationConditions: Map<EditText, List<() -> Boolean>>) {
     val checkFiedlsToEnableButton: () -> Unit = {
