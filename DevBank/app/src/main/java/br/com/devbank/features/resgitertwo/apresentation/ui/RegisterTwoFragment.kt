@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.com.devbank.R
 import br.com.devbank.base.BaseFragment
@@ -16,12 +15,14 @@ import br.com.devbank.extension.*
 import br.com.devbank.features.resgitertwo.apresentation.viewmodel.RegisterTwoViewModel
 import br.com.devbank.utils.Command
 import br.com.devbank.utils.Mask
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterTwoFragment : BaseFragment() {
 
     private var binding: FragmentRegisterTwoBinding? = null
-    private lateinit var viewModel: RegisterTwoViewModel
-    override val command = MutableLiveData<Command>()
+    private val viewModel: RegisterTwoViewModel by viewModel()
+    override val command: MutableLiveData<Command> = MutableLiveData()
+
     private var isCepExists = false
 
     override fun onCreateView(
@@ -51,11 +52,7 @@ class RegisterTwoFragment : BaseFragment() {
 
         }
 
-        activity?.let { actNonNull ->
-            viewModel = ViewModelProvider(actNonNull)[RegisterTwoViewModel::class.java]
-
-            viewModel.command = command
-        }
+        viewModel.command = command
 
         return binding?.root
     }

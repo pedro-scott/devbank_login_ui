@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_custom_round"
         android:supportsRtl="true"
+        android:name=".AppAplication"
         android:theme="@style/Theme.DevBank">
 
         <activity

@@ -6,6 +6,6 @@ import br.com.devbank.utils.Command
 
 abstract class BaseFragment : Fragment() {
 
-    protected abstract val command: MutableLiveData<Command>
+    abstract protected val command: MutableLiveData<Command>
 
 }

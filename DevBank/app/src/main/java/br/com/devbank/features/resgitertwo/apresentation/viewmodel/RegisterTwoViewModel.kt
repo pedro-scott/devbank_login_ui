@@ -8,9 +8,9 @@ import br.com.devbank.features.resgitertwo.data.model.AddressByCep
 import br.com.devbank.features.resgitertwo.domain.usecase.RegisterTwoUseCase
 import kotlinx.coroutines.launch
 
-class RegisterTwoViewModel : BaseViewModel() {
-
-    private val registerTwoUseCase = RegisterTwoUseCase()
+class RegisterTwoViewModel(
+    private val registerTwoUseCase: RegisterTwoUseCase
+) : BaseViewModel() {
 
     private val _onSuccessGetAddress = MutableLiveData<AddressByCep>()
     val onSuccessGetAddress: LiveData<AddressByCep> get() = _onSuccessGetAddress
